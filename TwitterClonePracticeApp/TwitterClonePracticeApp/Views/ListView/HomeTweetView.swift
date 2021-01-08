@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct HomeTweetView: View {
+
     var body: some View {
-        List{
-            TweetCellView()
-            TweetCellView()
-            TweetCellView()
-            TweetCellView()
+        NavigationView{
+            List{
+                NavigationLink(destination: TweetDetailView()){
+                    TweetCellView()
+                }
+            }.navigationBarTitle("", displayMode: .inline)
         }
     }
 }
