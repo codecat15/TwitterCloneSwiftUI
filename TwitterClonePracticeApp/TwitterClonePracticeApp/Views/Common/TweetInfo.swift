@@ -8,38 +8,36 @@
 import SwiftUI
 
 struct TweetInfo: View {
+    var tweetResponse: TweetListResponse
     var body: some View {
         
-        VStack(alignment: .leading, spacing: nil, content: {
+        VStack(alignment: .leading, spacing: 5, content: {
         HStack{
             ProfilePictureImageView()
             VStack(alignment: .leading, spacing: nil, content: {
-                Text("Codecat15").font(.system(size: 15, weight: .semibold, design: .default))
-                Text("@codecat15").font(.system(size: 13, weight: .light, design: .default))
+                Text(tweetResponse.name).font(.system(size: 15, weight: .semibold, design: .default))
+                Text(tweetResponse.account).font(.system(size: 13, weight: .light, design: .default))
                     .foregroundColor(.gray)
             })
         }
 
-            Text("""
-When some one asks me what superpowers I wish I had, I reply "To be able to stop people highjack the scrum meeting with their opinions which can be delt after the meeting in a separate call and not having to block other devs from giving their update." #agile #scrum
-
-""").font(.custom("Helvetica Neue", size: 22))
+            Text(tweetResponse.message).font(.custom("Helvetica Neue", size: 22))
 
             HStack(alignment:.top, spacing: nil, content: {
-                Text("8:22 AM . 1/6/21 .")
+                Text(tweetResponse.date)
                     .font(.system(size: 17, weight: .light, design: .default))
                     .foregroundColor(.gray)
 
-                Text("Twitter for iPhone")
+                Text(tweetResponse.source)
                     .font(.system(size: 17, weight: .semibold, design: .default))
                     .foregroundColor(.blue)
-            })
+            }).padding(EdgeInsets(top: 10, leading: 1, bottom: 1, trailing: 1))
         })
     }
 }
 
 struct TweetInfo_Previews: PreviewProvider {
     static var previews: some View {
-        TweetInfo()
+        TweetInfo(tweetResponse: TweetListResponse(id: 1, message: "Hello World", source: "Twitter for iPhone", name: "codecat15", date: "1/1/2021", account: "@codecat15", tweetActivity: TweetActivity(retweetCount: 1, likes: 1, comment: 1)))
     }
 }

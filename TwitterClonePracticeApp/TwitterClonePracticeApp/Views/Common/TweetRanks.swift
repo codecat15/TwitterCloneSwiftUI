@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct TweetRanks: View {
+    var tweetActivity: TweetActivity
     var body: some View {
         HStack(spacing:10){
             HStack{
                 Image(systemName: "bubble.left")
-                Text("45")
+                Text("\(tweetActivity.comment)")
                     .font(.footnote)
             }
 
             HStack{
                 Image(systemName: "arrow.clockwise")
-                Text("797").font(.footnote)
+                Text("\(tweetActivity.retweetCount)").font(.footnote)
             }
 
             HStack{
                 Image(systemName: "heart")
-                Text("3,466").font(.footnote)
+                Text("\(tweetActivity.likes)").font(.footnote)
             }
             Image(systemName: "square.and.arrow.up")
         }
@@ -32,6 +33,6 @@ struct TweetRanks: View {
 
 struct TweetRanks_Previews: PreviewProvider {
     static var previews: some View {
-        TweetRanks()
+        TweetRanks(tweetActivity: TweetActivity(retweetCount: 1, likes: 2, comment: 3))
     }
 }

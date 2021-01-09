@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct TweetRankDetails: View {
+    var tweetActivity : TweetActivity
+
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
             Divider()
             HStack{
-                Text("12.2K")
+                Text("\(tweetActivity.retweetCount)")
                     .foregroundColor(.red)
                     .font(.system(size: 14, weight: .semibold, design: .default))
                 Text("Retweets")
                     .font(.system(size: 14, weight: .light, design: .default))
                     .foregroundColor(.gray)
 
-                Text("793")
+                Text("\(tweetActivity.comment)")
                     .foregroundColor(.red)
                     .font(.system(size: 14, weight: .semibold, design: .default))
 
@@ -27,7 +29,7 @@ struct TweetRankDetails: View {
                     .font(.system(size: 14, weight: .light, design: .default))
                     .foregroundColor(.gray)
 
-                Text("12.2K")
+                Text("\(tweetActivity.likes)")
                     .foregroundColor(.red)
                     .font(.system(size: 14, weight: .semibold, design: .default))
                 Text("Likes")
@@ -42,6 +44,6 @@ struct TweetRankDetails: View {
 
 struct TweetRankDetails_Previews: PreviewProvider {
     static var previews: some View {
-        TweetRankDetails()
+        TweetRankDetails(tweetActivity: TweetActivity(retweetCount: 1, likes: 10, comment: 20))
     }
 }

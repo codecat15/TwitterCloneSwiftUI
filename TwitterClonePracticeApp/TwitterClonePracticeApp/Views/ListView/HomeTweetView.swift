@@ -9,11 +9,13 @@ import SwiftUI
 
 struct HomeTweetView: View {
 
+    @State private var tweetList = BundleJsonDecoder.decodeTweetListJson()
+
     var body: some View {
         NavigationView{
-            List{
-                NavigationLink(destination: TweetDetailView()){
-                    TweetCellView()
+            List(tweetList, id: \.id){ tweet in
+                NavigationLink(destination: TweetDetailView(tweet: tweet)){
+                    TweetCellView(tweetResponse: tweet)
                 }
             }.navigationBarTitle("", displayMode: .inline)
         }
