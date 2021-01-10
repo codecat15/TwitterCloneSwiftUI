@@ -28,6 +28,10 @@
 		86192AC925A6A317005C0121 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86192AC825A6A317005C0121 /* SearchView.swift */; };
 		86192ACE25A6A338005C0121 /* TwTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86192ACD25A6A338005C0121 /* TwTabbarView.swift */; };
 		86192ADB25A6A8AC005C0121 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86192ADA25A6A8AC005C0121 /* TweetCellView.swift */; };
+		863370A425AAA33700B66737 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863370A325AAA33700B66737 /* FloatingButton.swift */; };
+		863370AA25AAA3BD00B66737 /* ComposeTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863370A925AAA3BD00B66737 /* ComposeTweet.swift */; };
+		863370AF25AAAEC300B66737 /* ImageGalleryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863370AE25AAAEC300B66737 /* ImageGalleryGrid.swift */; };
+		863370B425AAAFF500B66737 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863370B325AAAFF500B66737 /* MediaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		86192AC825A6A317005C0121 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		86192ACD25A6A338005C0121 /* TwTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwTabbarView.swift; sourceTree = "<group>"; };
 		86192ADA25A6A8AC005C0121 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
+		863370A325AAA33700B66737 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		863370A925AAA3BD00B66737 /* ComposeTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTweet.swift; sourceTree = "<group>"; };
+		863370AE25AAAEC300B66737 /* ImageGalleryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryGrid.swift; sourceTree = "<group>"; };
+		863370B325AAAFF500B66737 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,8 @@
 				86115AAE25A7FC6000A78EA7 /* TweetInfo.swift */,
 				86115AB325A8000600A78EA7 /* TweetRankDetails.swift */,
 				86115AB825A8007000A78EA7 /* TweetOperations.swift */,
+				863370AE25AAAEC300B66737 /* ImageGalleryGrid.swift */,
+				863370B325AAAFF500B66737 /* MediaView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -236,6 +246,8 @@
 		86192AD225A6A342005C0121 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				863370A825AAA3AF00B66737 /* ComposeTweet */,
+				8633709F25AA9F1A00B66737 /* CustomViews */,
 				86115ACB25A80AFC00A78EA7 /* Helper */,
 				86115AA525A7FB9600A78EA7 /* Common */,
 				86192AC725A6A2F1005C0121 /* TabbarView */,
@@ -253,6 +265,22 @@
 				86115AC625A80AA800A78EA7 /* TweetListResponse.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		8633709F25AA9F1A00B66737 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				863370A325AAA33700B66737 /* FloatingButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		863370A825AAA3AF00B66737 /* ComposeTweet */ = {
+			isa = PBXGroup;
+			children = (
+				863370A925AAA3BD00B66737 /* ComposeTweet.swift */,
+			);
+			path = ComposeTweet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863370AA25AAA3BD00B66737 /* ComposeTweet.swift in Sources */,
 				86192AB825A6A2BF005C0121 /* HomeTweetView.swift in Sources */,
+				863370A425AAA33700B66737 /* FloatingButton.swift in Sources */,
 				86115AC725A80AA800A78EA7 /* TweetListResponse.swift in Sources */,
 				86192A8925A6A25C005C0121 /* ContentView.swift in Sources */,
 				86192ADB25A6A8AC005C0121 /* TweetCellView.swift in Sources */,
@@ -396,8 +426,10 @@
 				86115AA125A7F51000A78EA7 /* TweetRanks.swift in Sources */,
 				86192AC925A6A317005C0121 /* SearchView.swift in Sources */,
 				86115A9725A7E87100A78EA7 /* TweetDetailView.swift in Sources */,
+				863370B425AAAFF500B66737 /* MediaView.swift in Sources */,
 				86115AB425A8000600A78EA7 /* TweetRankDetails.swift in Sources */,
 				86115ACD25A80B0A00A78EA7 /* BundleJSONDecoder.swift in Sources */,
+				863370AF25AAAEC300B66737 /* ImageGalleryGrid.swift in Sources */,
 				86192AC325A6A2EA005C0121 /* MessageView.swift in Sources */,
 				86115AB925A8007000A78EA7 /* TweetOperations.swift in Sources */,
 				86115A9C25A7E8D500A78EA7 /* ProfilePictureImageView.swift in Sources */,
